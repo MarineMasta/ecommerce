@@ -15,8 +15,10 @@ The SQL database includes tables for products, categories, tags, and product tag
 - Run `npm install` in the root directory: 
   - `npm install`
 - Run `npm start` in the command line to start running the server
+- [Video](https://github.com/MarineMasta/ecommerce/blob/master/Screen%20Recording.mp4)
 
 
 ## Links
 - **[GitHub Repo](https://github.com/MarineMasta/ecommerce)**
+- **[Video](https://github.com/MarineMasta/ecommerce/blob/master/Screen%20Recording.mp4)**
 
