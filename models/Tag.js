@@ -7,12 +7,14 @@ Tag.init(
   {
     //Added these, similar to category and product and product tags
     id: {
+      //tag ID
       type: DataTypes.INTEGER,
       primaryKey: true,
       allowNull: false,
       autoIncrement: true
     },
     tag_name: {
+      //name
       type: DataTypes.STRING
     }
   },

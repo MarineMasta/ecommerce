@@ -7,16 +7,19 @@ Product.init(
   {
     //Added these, same as category
     id: {
+      //ID Number
       type: DataTypes.INTEGER,
       primaryKey: true,
       allowNull: false,
       autoIncrement: true
     },
     product_name: {
+      //Name
       type: DataTypes.STRING,
       allowNull: false,
     },
     price: {
+      //Product pricing
       type: DataTypes.DECIMAL,
       allowNull: false,
       validate: {
@@ -24,6 +27,7 @@ Product.init(
       }
     },
     stock: {
+      //Stock number
       type: DataTypes.INTEGER,
       allowNull: false,
       defaultValue: 10,
@@ -32,6 +36,7 @@ Product.init(
       }
     },
     category_id: {
+      //Category of product
       type: DataTypes.INTEGER,
       references: {
         model: 'category',

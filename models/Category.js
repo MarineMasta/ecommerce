@@ -8,12 +8,14 @@ Category.init(
   {
     //Added the id and category name, rest from Develop
     id: {
+      //Category ID
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
     category_name: {
+      //Name
       type: DataTypes.STRING,
       allowNull: false
     }

@@ -14,6 +14,7 @@ router.get('/', (req, res) => {
     }
   )
     .then(categoryData => res.json(categoryData))
+    //error
     .catch(err => {
       console.log(err);
       res.status(500).json({ message: 'Sorry, we could not find those categories!' });
@@ -32,6 +33,7 @@ router.get('/:id', (req, res) => {
       attributes: ['category_id']
     }
   })
+  //error
     .then(categoryData => res.json(categoryData))
     .catch(err => {
       console.log(err);
@@ -45,6 +47,7 @@ router.post('/', (req, res) => {
     category_name: req.body.category_name
   })
     .then(categoryData => res.json(categoryData))
+    //error
     .catch(err => {
       console.log(err);
       res.status(500).json({ message: 'Sorry, we could not create that category!' });
@@ -63,6 +66,7 @@ router.put('/:id', (req, res) => {
       }
     })
     .then(categoryData => {
+      //ID error
       if (!categoryData) {
         res.status(404).json({ message: 'Sorry, we could not update that category! No category was found with that ID.' });
         return;
@@ -70,6 +74,7 @@ router.put('/:id', (req, res) => {
       res.json(categoryData);
     })
     .catch(err => {
+      //error
       console.log(err);
       res.status(500).json({ message: 'Sorry, we could not update that category!' });
     });
@@ -83,12 +88,14 @@ router.delete('/:id', (req, res) => {
     }
   })
     .then(categoryData => {
+      //ID error
       if (!categoryData) {
         res.status(404).json({ message: 'Sorry, we could not delete that category! No category was found with that ID.' });
         return;
       }
       res.json(categoryData);
     })
+    //error
     .catch(err => {
       console.log(err);
       res.status(500).json({ message: 'Sorry, we could not delete that category!' });

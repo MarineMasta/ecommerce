@@ -20,6 +20,7 @@ router.get('/', (req, res) => {
     }
   )
     .then(productData => res.json(productData))
+    //error
     .catch(err => {
       console.log(err);
       res.status(500).json({ message: 'Sorry, we could not find those products!' });
@@ -43,6 +44,7 @@ router.get('/:id', (req, res) => {
     ]
   })
     .then(productData => res.json(productData))
+    //error
     .catch(err => {
       console.log(err);
       res.status(500).json({ message: 'Sorry, we could not find that product!' });
@@ -65,6 +67,7 @@ router.post('/', (req, res) => {
       res.status(200).json(product);
     })
     .then((productTagIds) => res.status(200).json(productTagIds))
+    //error
     .catch((err) => {
       console.log(err);
       res.status(400).json({ message: 'Sorry, we could not create that product!' });
@@ -100,7 +103,10 @@ router.put('/:id', (req, res) => {
       ]);
     })
     .then((updatedProductTags) => res.json(updatedProductTags))
+
     .catch((err) => {
+      //error
+      console.leg(err);
       res.status(400).json({ message: 'Sorry, we could not update that product!' });
     });
 });
@@ -114,11 +120,13 @@ router.delete('/:id', (req, res) => {
   })
     .then(productData => {
       if (!productData) {
+        //ID error
         res.status(404).json({ message: 'Sorry, we could not delete that product as this ID matches no product!' });
         return;
       }
       res.json(productData);
     })
+    //error
     .catch(err => {
       console.log(err);
       res.status(500).json({ message: 'Sorry, we could not delete that product!' });

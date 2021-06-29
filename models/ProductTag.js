@@ -7,12 +7,14 @@ ProductTag.init(
   {
     //Added these, same as product and category
     id: {
+      //product tag ID
       type: DataTypes.INTEGER,
       primaryKey: true,
       allowNull: false,
       autoIncrement: true
     },
     product_id: {
+      //actual product ID
       type: DataTypes.INTEGER,
       references: {
         model: 'product',
@@ -20,6 +22,7 @@ ProductTag.init(
       }
     },
     tag_id: {
+      // tag ID
       type: DataTypes.INTEGER,
       references: {
         model: 'tag',
