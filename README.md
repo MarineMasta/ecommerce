@@ -18,6 +18,5 @@ The SQL database includes tables for products, categories, tags, and product tag
 
 
 ## Links
-- **[GitHub Repo](https://github.com/tchestnut85/e-commerce-backend/)**
-- **[Video Walkthrough](https://drive.google.com/file/d/1aGgXZqMSke0a-EXT3zCncm3080TtxUTE/view)**
+- **[GitHub Repo](https://github.com/MarineMasta/ecommerce)**
 
